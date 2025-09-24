@@ -1,8 +1,7 @@
-
-const Container = () => {
+const Container = ({ name }) => {
     return (
     <div className="flex  h-[80vh] w-[40vw] bg-gradient-to-br from-[hsl(317,13%,52%)] to-[hsl(317,13%,22%)] rounded-4xl ">
-        <div className="flex flex-col items-center justify-center gap-4 h-[60vh] w-[40vw]">
+        <div className="flex flex-col items-center justify-center gap-4 h-[60vh] w-[40vw]">{name && (<h1 className="text-2xl font-semibold text-white mb-2">Welcome {name}</h1>)}
         <input type="email" placeholder="Email" className="w-[30vw] h-[5vh] rounded-xl p-2 border-amber-50 border-2" />
         <input type="password" placeholder="Password" className="w-[30vw] h-[5vh] rounded-xl p-2 border-amber-50 border-2" />
         <p href="#" className="text-black cursor-pointer hover:text-[hsl(200,43%,78%)]">Forgot Password?</p>
